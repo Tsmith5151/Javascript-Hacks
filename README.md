@@ -37,13 +37,12 @@ then `translate` should take a string of valid ML as its sole argument, and retu
 The valid ML input message should result valid HTML fragments. So translating the above example into HTML with the desired text effects 
 applied looks like the following:
 
-###### ML Input:
+###### Additional Examples: ML to HTML:
+
 ```javascript
 var myHTML = MLTranslator.translate(“Greetings ^%from ^~Glornix^!% BetaNine^!~.”)
 // HTML Results: Greetings <strong>from <em>Glornix</em></strong><em> BetaNine</ em>.
 ```
-
-###### Other Examples:
 
 ```javascript
 var myHTML = MLTranslator.translate("Hello, Earth!");
