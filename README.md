@@ -12,16 +12,25 @@ For a string to be valid ML, all elements that are opened must be closed before 
 (not part of a markup element) are not permitted. Unlike HTML, ML elements that are opened within a different ML effect do not need to 
 be enclosed by that effect. 
 
-- The source code can be found in `translate.js` and the script is tested in `aml_tester.js`. First install mock-broswer by typing 
-```npm install mockbrowser``` in the terminal/command window. To test the code type ```node ./aml_tester.js ./translate.js```.
+- The source code can be found in `translate.js` and the script is tested in `aml_tester.js`. 
+  - 1. Install mock-broswer by typing  ```npm install mockbrowser``` in the terminal/command window. 
+  - 2. To test the code type ```node ./aml_tester.js ./translate.js```.
 
 
 #### ML to HTML Examples:
 
-- Ok: ```^~ Greetings ^% Earthling. ^!% ^!~```
-- Also Ok: ```^~ Greetings ^% Earthling. ^!~ How are you? ^!%```
-- Note: a single ML tag cannot be opened twice without being closed.```
-  - This is not Ok: ```^~ Greetings ^~ Earthling. ^!~ ^!~```
+-Thi is an example of a valid ML input message:
+```javascript 
+^~ Greetings ^% Earthling. ^!% ^!~
+```
+- This example is also valid:
+```javascript
+^~ Greetings ^% Earthling. ^!~ How are you? ^!%
+```
+- Note: a single ML tag cannot be opened twice without being closed. This is an example of NOT okay:
+```javascript
+^~ Greetings ^~ Earthling. ^!~ ^!~
+```
 
 |Text Effect  <tags> |Element Opening  |Element Closing|
 :-------------------:|:--------------: | :-------------|
