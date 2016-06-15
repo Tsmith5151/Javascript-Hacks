@@ -19,7 +19,7 @@ be enclosed by that effect.
 
 #### ML to HTML Examples:
 
--Thi is an example of a valid ML input message:
+- This is an example of a valid ML input message:
 ```javascript 
 ^~ Greetings ^% Earthling. ^!% ^!~
 ```
