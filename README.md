@@ -29,27 +29,32 @@ be enclosed by that effect.
 |Emphasis            |       ^~        |      ^!~      |
 
 - Here is a couple of examples:
-  -Greetings ^%from ^~Glornix^!% BetaNine^!~. Would be rendered as: Greetings **from Glornix** BetaNine.
+  -ML: Greetings ^%from ^~Glornix^!% BetaNine^!~. 
+  -HTML would be rendered as: Greetings **from Glornix** BetaNine.
 
 - So the goal of this code is to write a javascript file that defines a global object with a callable method named `translate` and 
 then `translate` should take a string of valid ML as its sole argument, and return a valid HTML fragment with no wrapping elements. 
 The valid ML input message should result valid HTML fragments. So translating the above example into HTML with the desired text effects 
 applied looks like the following:
 
-##### ML Input:
+###### ML Input:
 ```javascript
 var myHTML = MLTranslator.translate(“Greetings ^%from ^~Glornix^!% BetaNine^!~.”)
+// HTML Results: Greetings <strong>from <em>Glornix</em></strong><em> BetaNine</ em>.
 ```
 
-##### HTML Output:
-Greetings <strong>from <em>Glornix</em></strong><em> BetaNine</ em>.
+###### Other Examples:
 
-##### Other Examples:
-**ML:** ```Hello, Earth!```
-**HTML:** ```Hello, Earth!```
+```javascript
+var myHTML = MLTranslator.translate("Hello, Earth!");
+// HTML Results: Hello, Earth!
+```
+```javascript
+var myHTML = MLTranslator.translate("Hello, ^%Earth^!%");
+// HTML Results: Hello, <strong>Earth!</strong>
+```
 
-**ML:** ```Hello, ^%Earth^!% ```
-**HTML:** ```Hello, <strong>Earth!</strong>```
-
-**MLL:** ```^~Hello, ^%Earth!^!~ We are pleased ^~to^!% meet you.^!~```
-**HTML:** ```<em>Hello,<strong>Earth!</strong></em><strong>We are pleased <em> to </em></strong><em>meet you.</em>```
+```javascript
+var myHTML = MLTranslator.translate("^~Hello, ^%Earth!^!~ We are pleased ^~to^!% meet you.^!~");
+// HTML Results: <em>Hello,<strong>Earth!</strong></em><strong>We are pleased <em> to </em></strong><em>meet you.</em>
+```
