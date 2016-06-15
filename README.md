@@ -1,7 +1,7 @@
 # Javascript-Hacks
 
 <p align= center>
-<img src ="http://www.artworkvector.com/124-thickbox_default/alien-workshop-logo-free-artwork-vector-graphic-resources.jpg">
+<img src ="http://seeklogo.com/images/A/alien-logo-65FC9F8BB3-seeklogo.com.gif">
 </p>
 
 ## Problem Statement:
@@ -24,6 +24,7 @@ be enclosed by that effect.
   - This is not Ok: ```^~ Greetings ^~ Earthling. ^!~ ^!~```
 
 |Text Effect  <tags> |Element Opening  |Element Closing|
+:-------------------:|:--------------: | :-------------|
 |Strong              |       ^%        |      ^!%      |
 |Emphasis            |       ^~        |      ^!~      |
 
